@@ -7,7 +7,7 @@ A personal finance management application built with Python that helps track inc
     - [Transaction Management](#transaction-management)
     - [Account Management](#account-management)
     - [Category Management](#category-management)
-    - [Filtering \& Analysis](#filtering--analysis)
+    - [Filtering](#filtering)
     - [Summaries](#summaries)
     - [Data Management](#data-management)
   - [Installation](#installation)
@@ -17,15 +17,17 @@ A personal finance management application built with Python that helps track inc
     - [Running the Application](#running-the-application)
     - [Main Menu](#main-menu)
     - [Getting Started](#getting-started)
+    - [Running tests](#running-tests)
 
 ## Features
 
 ### Transaction Management
 
 -   **Add Transactions**: Record income and expenses with details including amount, date, category, account, and optional notes
+-   **View All Transactions**: Display all transactions in a formatted table
 -   **Edit Transactions**: Modify existing transaction details
 -   **Delete Transactions**: Remove unwanted transactions
--   **View All Transactions**: Display all transactions in a formatted table
+
 
 ### Account Management
 
@@ -36,17 +38,16 @@ A personal finance management application built with Python that helps track inc
 
 ### Category Management
 
--   **Income Categories**: Manage income sources
--   **Expense Categories**: Organize expenses
 -   **Add Categories**: Create custom categories for both income and expenses
+-   **View Categories**: View all categories available
 -   **Edit Categories**: Rename existing categories
 -   **Delete Categories**: Remove unused categories
 
-### Filtering & Analysis
+### Filtering
 
 -   **Filter by Category**: View all transactions for a specific category
--   **Filter by Account**: See transactions from a particular account
--   **Filter by Type**: Separate income from expenses
+-   **Filter by Account**: See transactions for a particular account
+-   **Filter by Type**: Separate income transactions or expense transactions
 
 ### Summaries
 
@@ -58,18 +59,17 @@ A personal finance management application built with Python that helps track inc
 
 ### Data Management
 
--   **Auto-save**: All changes are automatically saved to JSON
--   **Backup**: Create manual backups of your financial data
--   **Data Persistence**: Your data is preserved between sessions
+-   **Auto-save**: All changes are automatically saved to JSON file
+-   **Backup**: Create backups of your financial data
+-   **Data Persistence**: Data is preserved between sessions
 
 ## Installation
 
 ### Step 1: Clone or Download the Repository
 
 ```powershell
-# If using Git
-git clone https://github.com/ZiLin-628/FIT1045-Project.git
-cd FIT1045-Project
+git clone https://github.com/ZiLin-628/FIT1045-Distinction-Project.git
+cd FIT1045-Distinction-Project
 ```
 
 ### Step 2: Install Dependencies
@@ -80,9 +80,6 @@ Install all required Python packages using pip:
 pip install -r requirements.txt
 ```
 
-
-All tests should pass successfully.
-
 ## Usage
 
 ### Running the Application
@@ -92,6 +89,7 @@ To start the Money Tracker application:
 ```powershell
 python main.py
 ```
+
 
 ### Main Menu
 
@@ -128,3 +126,10 @@ Once started, you'll see the main menu with the following options:
 4. **Analyze your finance** (Options 4-5):
     - Use filtering to focus on specific categories or accounts
     - Generate summaries
+
+
+### Running tests
+
+```powershell
+pytest
+```
