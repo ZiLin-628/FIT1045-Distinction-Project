@@ -69,7 +69,7 @@ A personal finance management application built with Python that helps track inc
 
 ```powershell
 git clone https://github.com/ZiLin-628/FIT1045-Distinction-Project.git
-cd FIT1045-Distinction-Project
+cd FIT1045-Distinction-Project-main
 ```
 
 ### Step 2: Install Dependencies
