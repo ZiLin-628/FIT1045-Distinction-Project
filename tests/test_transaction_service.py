@@ -1,3 +1,5 @@
+# test/test_tramsactopm_service.py
+
 from datetime import datetime, timedelta
 from decimal import Decimal
 from unittest.mock import MagicMock
@@ -8,7 +10,6 @@ from app.exception import InvalidInputError, NotFoundError
 from app.models import TransactionType
 from app.services.transaction_service import TransactionService
 from app.utility import format_amount
-
 
 
 class FakeAccount:
@@ -78,8 +79,6 @@ def setup_accounts_and_categories(transaction_service, money_manager):
     money_manager.category_service.income_categories.append("Salary")
     money_manager.category_service.expense_categories.append("Food")
     return acc1, acc2
-
-
 
 
 class TestNextTransactionID:
@@ -252,6 +251,3 @@ class TestDeleteTransaction:
     def test_delete_nonexistent_transaction_raises(self, transaction_service):
         with pytest.raises(NotFoundError):
             transaction_service.delete_transaction(999)
-
-
-

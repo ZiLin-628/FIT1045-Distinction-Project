@@ -1,4 +1,4 @@
-# summary_service.py
+# app/services/summary_service.py
 
 from __future__ import annotations
 

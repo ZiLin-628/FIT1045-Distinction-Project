@@ -1,3 +1,5 @@
+# test/test_summary_service.py
+
 from datetime import datetime, timedelta
 from decimal import Decimal
 from unittest.mock import MagicMock
@@ -6,8 +8,6 @@ import pytest
 
 from app.models import TransactionType
 from app.services.summary_service import SummaryService
-
-# ------------------ Fake Classes ------------------
 
 
 class FakeAccount:
@@ -258,5 +258,3 @@ class TestIncomeByCategory:
         start = datetime(2025, 10, 10)
         end = datetime(2025, 10, 5)
         assert summary_service.get_income_by_category(start, end) == {}
-
-

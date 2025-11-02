@@ -1,4 +1,4 @@
-# menu.py
+# app/menu.py
 
 from abc import ABC, abstractmethod
 from decimal import Decimal
@@ -40,7 +40,6 @@ def print_table(data: list[dict]) -> None:
     rows = [[record[k] for k in keys] for record in data]
 
     print(tabulate(rows, headers=headers))
-
 
 
 def add_transaction(money_manager: MoneyManager):
@@ -126,7 +125,6 @@ def delete_transaction(money_manager: MoneyManager):
         print(f"Error: {e}")
 
 
-
 def add_account(money_manager: MoneyManager):
     """Add a new account."""
     account_name = input("Account name: ")
@@ -168,8 +166,6 @@ def delete_account(money_manager: MoneyManager):
         print(f"Account '{account_name}' deleted successfully")
     except (InvalidInputError, NotFoundError) as e:
         print(f"Error: {e}")
-
-
 
 
 def add_category(money_manager: MoneyManager):
@@ -231,9 +227,6 @@ def delete_category(money_manager: MoneyManager):
         print(f"Category '{category_name}' removed successfully")
     except (InvalidInputError, NotFoundError, CategoryInUseError) as e:
         print(f"Error: {e}")
-
-
-
 
 
 def filter_by_category(money_manager: MoneyManager):
@@ -390,8 +383,6 @@ def income_summary(money_manager: MoneyManager):
         print(f"Error: {e}")
 
 
-
-
 def backup_data_action(money_manager: MoneyManager):
     """Create a backup of the current data."""
     try:
@@ -402,9 +393,6 @@ def backup_data_action(money_manager: MoneyManager):
             print("Backup failed!")
     except Exception as e:
         print(f"Error creating backup: {e}")
-
-
-
 
 
 class UserAction(ABC):

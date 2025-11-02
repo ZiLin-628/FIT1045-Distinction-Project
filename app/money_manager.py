@@ -1,4 +1,4 @@
-# money_manager.py
+# app/money_manager.py
 
 import datetime
 import json

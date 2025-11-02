@@ -1,4 +1,4 @@
-# exception.py
+# app/exception.py
 
 class AlreadyExistsError(Exception):
     """

@@ -1,4 +1,4 @@
-# filter_service.py
+# app/services/filter_service.py
 
 from __future__ import annotations
 
